@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kallyan Chakma</title>
+  <meta name="description" content="Kallyan Chakma: Research Fellow, Molecular Biologist, Microbial Genomics, Bioinformatics.">
+  <meta name="theme-color" content="#1abc9c">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/85a002f6e5.js" crossorigin="anonymous"></script>
@@ -168,18 +170,18 @@
     <nav>
       <div class="logo">KALLYAN CHAKMA</div>
       <div class="nav-links" role="tablist">
-        <button class="active" onclick="showTab(event, 'about')" role="tab" aria-controls="about" aria-selected="true">About Me</button>
-        <button onclick="showTab(event, 'projects')" role="tab" aria-controls="projects" aria-selected="false">Projects</button>
-        <button onclick="showTab(event, 'publications')" role="tab" aria-controls="publications" aria-selected="false">Publications</button>
-        <button onclick="showTab(event, 'employment')" role="tab" aria-controls="employment" aria-selected="false">Employment</button>
-        <button onclick="showTab(event, 'cv')" role="tab" aria-controls="cv" aria-selected="false">CV</button>
-        <button onclick="showTab(event, 'contact')" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+        <button class="active" onclick="showTab(event, 'about')" role="tab" aria-controls="about" aria-selected="true" tabindex="0">About Me</button>
+        <button onclick="showTab(event, 'projects')" role="tab" aria-controls="projects" aria-selected="false" tabindex="0">Projects</button>
+        <button onclick="showTab(event, 'publications')" role="tab" aria-controls="publications" aria-selected="false" tabindex="0">Publications</button>
+        <button onclick="showTab(event, 'employment')" role="tab" aria-controls="employment" aria-selected="false" tabindex="0">Employment</button>
+        <button onclick="showTab(event, 'cv')" role="tab" aria-controls="cv" aria-selected="false" tabindex="0">CV</button>
+        <button onclick="showTab(event, 'contact')" role="tab" aria-controls="contact" aria-selected="false" tabindex="0">Contact</button>
       </div>
     </nav>
   </header>
   <main>
     <aside class="profile">
-      <img src="kallyan.jpeg" alt="Portrait of Kallyan Chakma" />
+      <img src="kallyan.jpeg" alt="Portrait of Kallyan Chakma" loading="lazy" onerror="this.onerror=null;this.src='default-avatar.png';" />
       <h2>Kallyan Chakma</h2>
       <p>Research Fellow<br>Bangladesh Forest Research Institute</p>
       <p>Molecular Biologist | Microbial Genomics | Bioinformatics</p>
@@ -190,11 +192,11 @@
       </div>
     </aside>
     <section class="tabbed-content">
-      <section id="about" class="tab-section active" role="tabpanel">
+      <section id="about" class="tab-section active" role="tabpanel" tabindex="0">
         <h2>About Me</h2>
-        <p>Hello! I am <strong>Kallyan Chakma</strong>, a Research Fellow at the <strong>Bangladesh Forest Research Institute</strong>. My focus is on <strong>microbial genomics, metagenomics, and bioinformatics</strong>. I hold a degree in <strong>Genetic Engineering and Biotechnology</strong> from the <a href="https://cu.ac.bd" target="_blank" rel="noopener">University of Chittagong</a>. My research bridges traditional practices and modern molecular biology, especially in <strong>agarwood resin production</strong>.</p>
+        <p>Hello! I am <strong>Kallyan Chakma</strong>, a Research Fellow at the <strong>Bangladesh Forest Research Institute</strong>. My focus is on <strong>microbial genomics, metagenomics, and bioinformatics</strong>. I am passionate about uncovering the molecular mechanisms of microbial communities and their impact on environmental and clinical settings.</p>
       </section>
-      <section id="projects" class="tab-section" role="tabpanel">
+      <section id="projects" class="tab-section" role="tabpanel" tabindex="0">
         <h2>Projects</h2>
         <ul>
           <li>Development of biotic/abiotic inducers for agarwood resin synthesis</li>
@@ -202,7 +204,7 @@
           <li>Metagenomic profiling of environmental and clinical microbiomes</li>
         </ul>
       </section>
-      <section id="publications" class="tab-section" role="tabpanel">
+      <section id="publications" class="tab-section" role="tabpanel" tabindex="0">
         <h2>Publications</h2>
         <ul>
           <li>Chakma, K. et al. (2023). Agarwood biosynthesis: molecular insights and applied strategies. <em>Journal of Plant Science</em>.</li>
@@ -210,7 +212,7 @@
           <!-- Add more as needed -->
         </ul>
       </section>
-      <section id="employment" class="tab-section" role="tabpanel">
+      <section id="employment" class="tab-section" role="tabpanel" tabindex="0">
         <h2>Employment</h2>
         <ul>
           <li><strong>Research Fellow</strong> – Bangladesh Forest Research Institute (2022–present)</li>
@@ -218,11 +220,11 @@
           <!-- Add more as needed -->
         </ul>
       </section>
-      <section id="cv" class="tab-section" role="tabpanel">
+      <section id="cv" class="tab-section" role="tabpanel" tabindex="0">
         <h2>CV</h2>
         <p><a href="CV_Kallyan_Chakma.pdf" target="_blank" rel="noopener">Download my CV</a> (updated July 2025).</p>
       </section>
-      <section id="contact" class="tab-section" role="tabpanel">
+      <section id="contact" class="tab-section" role="tabpanel" tabindex="0">
         <h2>Contact</h2>
         <p>Reach out via email or LinkedIn for collaborations, consultations, or to discuss research ideas.</p>
       </section>
@@ -232,11 +234,13 @@
     &copy; 2025 Kallyan Chakma &middot; Built with GitHub Pages &middot; Last updated: July 31, 2025
   </footer>
   <script>
+    // Improved tab navigation: keyboard support and active state
     function showTab(event, id) {
       // Remove active from all buttons
       document.querySelectorAll('.nav-links button').forEach(btn => {
         btn.classList.remove('active');
         btn.setAttribute('aria-selected', 'false');
+        btn.tabIndex = 0;
       });
       // Hide all tab sections
       document.querySelectorAll('.tab-section').forEach(sec => sec.classList.remove('active'));
@@ -246,6 +250,8 @@
       document.getElementById(id).classList.add('active');
       // Update URL hash for sharing/bookmarking
       history.replaceState(null, '', '#' + id);
+      // Focus the new tab section for accessibility
+      document.getElementById(id).focus();
     }
     // On load: show section if hash is present
     window.addEventListener('DOMContentLoaded', () => {
@@ -254,6 +260,19 @@
         const btn = document.querySelector(`.nav-links button[onclick*="'${hash}'"]`);
         if (btn) btn.click();
       }
+      // Keyboard navigation for tabs (left/right arrow keys)
+      document.querySelector('.nav-links').addEventListener('keydown', function(e) {
+        if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+          let buttons = Array.from(this.querySelectorAll('button'));
+          let index = buttons.indexOf(document.activeElement);
+          if (index !== -1) {
+            let next = e.key === "ArrowRight"
+              ? (index + 1) % buttons.length
+              : (index - 1 + buttons.length) % buttons.length;
+            buttons[next].focus();
+          }
+        }
+      });
     });
   </script>
 </body>
