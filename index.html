@@ -4,275 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kallyan Chakma</title>
-  <meta name="description" content="Kallyan Chakma: Research Fellow, Molecular Biologist, Microbial Genomics, Bioinformatics.">
-  <meta name="theme-color" content="#1abc9c">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/85a002f6e5.js" crossorigin="anonymous"></script>
   <style>
-    :root {
-      --primary: #1abc9c;
-      --dark: #222;
-      --bg: #f9f9f9;
-      --white: #fff;
-      --accent: #007acc;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Montserrat', 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--dark);
-      line-height: 1.7;
-    }
-    header {
-      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-      color: var(--white);
-      padding: 2rem 0 1rem 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-    }
-    nav {
-      max-width: 950px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 1.5rem;
-      flex-wrap: wrap;
-    }
-    .logo {
-      font-weight: 700;
-      font-size: 1.6rem;
-      letter-spacing: 2px;
-    }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .nav-links button {
-      background: none;
-      border: none;
-      color: var(--white);
-      font-weight: 500;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: border-bottom 0.2s, color 0.2s;
-      padding: 0.4em 0.8em 0.2em 0.8em;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-links button.active,
-    .nav-links button:hover,
-    .nav-links button:focus {
-      border-bottom: 2px solid var(--white);
-      color: #fffbe7;
-      outline: none;
-    }
-    main {
-      max-width: 950px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .profile {
-      flex: 1 1 220px;
-      background: var(--white);
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.09);
-      text-align: center;
+    body { font-family: 'Montserrat', sans-serif; margin: 0; background: #fff; color: #222; }
+    .container { display: flex; min-height: 100vh; }
+    aside {
+      background: #f1f5fa;
+      width: 220px;
       padding: 2rem 1rem;
-      min-width: 220px;
-      max-width: 270px;
-      margin-bottom: 1.5rem;
-      align-self: flex-start;
-    }
-    .profile img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      border: 3px solid var(--primary);
-    }
-    .contact-links {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.1rem;
-    }
-    .contact-links a {
-      color: var(--primary);
-      background: #eafaf7;
-      padding: 0.5em 0.7em;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      transition: background 0.2s, color 0.2s;
-      display: inline-block;
-    }
-    .contact-links a:hover, .contact-links a:focus {
-      background: var(--primary);
-      color: #fff;
-    }
-    .tabbed-content {
-      flex: 3 1 500px;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.05);
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      align-items: center;
     }
-    .tab-section {
-      display: none;
-      background: var(--white);
-      padding: 1.5rem 1.2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      animation: fade-in 0.6s;
+    aside img {
+      width: 100px; height: 100px; border-radius: 50%; margin-bottom: 1rem;
     }
-    .tab-section.active {
-      display: block;
+    aside h2 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+    nav {
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-    @keyframes fade-in {
-      from { opacity: 0; transform: translateY(15px);}
-      to { opacity: 1; transform: translateY(0);}
+    nav a {
+      text-decoration: none;
+      color: #007acc;
+      font-weight: 600;
+      padding: 0.3em 0;
+      border-left: 4px solid transparent;
+      transition: border 0.2s, color 0.2s;
     }
-    h2 {
-      color: var(--primary);
-      font-size: 1.3rem;
-      margin-bottom: 0.6rem;
-      font-weight: 700;
+    nav a.active, nav a:hover {
+      color: #1abc9c;
+      border-left: 4px solid #1abc9c;
     }
-    ul { padding-left: 1.2rem; }
-    ul li { margin-bottom: 0.4rem;}
-    a { color: var(--accent);}
-    footer {
-      text-align: center;
-      background: var(--dark);
-      color: var(--white);
-      padding: 1rem;
-      margin-top: 3rem;
-      font-size: 0.98rem;
-      letter-spacing: 1px;
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
     }
-    @media (max-width: 950px) {
-      main { flex-direction: column; align-items: stretch;}
-      .profile, .tabbed-content { max-width: 100%; min-width: 0; }
-    }
-    @media (max-width: 600px) {
-      nav { flex-direction: column; align-items: flex-start;}
-      .nav-links { flex-direction: column; gap:0.7rem; margin-top: 1rem;}
-      main { padding: 0 0.5rem; }
-      .profile { margin-bottom: 1rem;}
+    @media (max-width: 800px) {
+      .container { flex-direction: column; }
+      aside { flex-direction: row; width: 100%; box-shadow: none; border-bottom: 1px solid #eee;}
+      nav { flex-direction: row; margin: 0 0 0 2rem; }
+      nav a { border-left: none; border-bottom: 2px solid transparent; }
+      nav a.active, nav a:hover { border-bottom: 2px solid #1abc9c; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">KALLYAN CHAKMA</div>
-      <div class="nav-links" role="tablist">
-        <button class="active" onclick="showTab(event, 'about')" role="tab" aria-controls="about" aria-selected="true" tabindex="0">About Me</button>
-        <button onclick="showTab(event, 'projects')" role="tab" aria-controls="projects" aria-selected="false" tabindex="0">Projects</button>
-        <button onclick="showTab(event, 'publications')" role="tab" aria-controls="publications" aria-selected="false" tabindex="0">Publications</button>
-        <button onclick="showTab(event, 'employment')" role="tab" aria-controls="employment" aria-selected="false" tabindex="0">Employment</button>
-        <button onclick="showTab(event, 'cv')" role="tab" aria-controls="cv" aria-selected="false" tabindex="0">CV</button>
-        <button onclick="showTab(event, 'contact')" role="tab" aria-controls="contact" aria-selected="false" tabindex="0">Contact</button>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <aside class="profile">
-      <img src="kallyan.jpeg" alt="Portrait of Kallyan Chakma" loading="lazy" onerror="this.onerror=null;this.src='default-avatar.png';" />
+  <div class="container">
+    <aside>
+      <img src="kallyan.jpeg" alt="Kallyan Chakma" />
       <h2>Kallyan Chakma</h2>
-      <p>Research Fellow<br>Bangladesh Forest Research Institute</p>
-      <p>Molecular Biologist | Microbial Genomics | Bioinformatics</p>
-      <div class="contact-links" aria-label="Contact">
-        <a href="mailto:kallyan.chakma@outlook.com" title="Email" aria-label="Email"><i class="far fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/kallyan-chakma-097148103/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://orcid.org/0000-0002-9870-4561" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID"><i class="fas fa-id-card"></i></a>
-      </div>
+      <div>Research Fellow<br>Bangladesh Forest Research Institute</div>
+      <nav>
+        <a href="#home" class="active" onclick="showSection(event, 'home')">Home</a>
+        <a href="#research" onclick="showSection(event, 'research')">Research</a>
+        <a href="#publications" onclick="showSection(event, 'publications')">Publications</a>
+        <a href="#cv" onclick="showSection(event, 'cv')">CV</a>
+        <a href="#contact" onclick="showSection(event, 'contact')">Contact</a>
+      </nav>
     </aside>
-    <section class="tabbed-content">
-      <section id="about" class="tab-section active" role="tabpanel" tabindex="0">
-        <h2>About Me</h2>
-        <p>Hello! I am <strong>Kallyan Chakma</strong>, a Research Fellow at the <strong>Bangladesh Forest Research Institute</strong>. My focus is on <strong>microbial genomics, metagenomics, and bioinformatics</strong>. I am passionate about uncovering the molecular mechanisms of microbial communities and their impact on environmental and clinical settings.</p>
+    <main>
+      <section id="home" class="section">
+        <h1>Welcome</h1>
+        <p>Hello! I am <b>Kallyan Chakma</b>, Research Fellow at Bangladesh Forest Research Institute. I work on microbial genomics, metagenomics, and bioinformatics.</p>
       </section>
-      <section id="projects" class="tab-section" role="tabpanel" tabindex="0">
-        <h2>Projects</h2>
+      <section id="research" class="section" style="display:none;">
+        <h1>Research</h1>
         <ul>
           <li>Development of biotic/abiotic inducers for agarwood resin synthesis</li>
           <li>Pan-genomic comparison and AMR analysis of <em>Pseudomonas aeruginosa</em></li>
           <li>Metagenomic profiling of environmental and clinical microbiomes</li>
         </ul>
       </section>
-      <section id="publications" class="tab-section" role="tabpanel" tabindex="0">
-        <h2>Publications</h2>
+      <section id="publications" class="section" style="display:none;">
+        <h1>Publications</h1>
         <ul>
           <li>Chakma, K. et al. (2023). Agarwood biosynthesis: molecular insights and applied strategies. <em>Journal of Plant Science</em>.</li>
           <li>Chakma, K. et al. (2022). Metagenomic analysis of forest soils. <em>Microbial Ecology</em>.</li>
-          <!-- Add more as needed -->
         </ul>
       </section>
-      <section id="employment" class="tab-section" role="tabpanel" tabindex="0">
-        <h2>Employment</h2>
-        <ul>
-          <li><strong>Research Fellow</strong> – Bangladesh Forest Research Institute (2022–present)</li>
-          <li><strong>Research Assistant</strong> – University of Chittagong, Dept. of Genetic Engineering (2020–2022)</li>
-          <!-- Add more as needed -->
-        </ul>
+      <section id="cv" class="section" style="display:none;">
+        <h1>CV</h1>
+        <a href="CV_Kallyan_Chakma.pdf" target="_blank">Download my CV</a>
       </section>
-      <section id="cv" class="tab-section" role="tabpanel" tabindex="0">
-        <h2>CV</h2>
-        <p><a href="CV_Kallyan_Chakma.pdf" target="_blank" rel="noopener">Download my CV</a> (updated July 2025).</p>
+      <section id="contact" class="section" style="display:none;">
+        <h1>Contact</h1>
+        <p>Email: <a href="mailto:kallyan.chakma@outlook.com">kallyan.chakma@outlook.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kallyan-chakma-097148103/" target="_blank">Kallyan Chakma</a></p>
       </section>
-      <section id="contact" class="tab-section" role="tabpanel" tabindex="0">
-        <h2>Contact</h2>
-        <p>Reach out via email or LinkedIn for collaborations, consultations, or to discuss research ideas.</p>
-      </section>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 Kallyan Chakma &middot; Built with GitHub Pages &middot; Last updated: July 31, 2025
-  </footer>
+    </main>
+  </div>
   <script>
-    // Improved tab navigation: keyboard support and active state
-    function showTab(event, id) {
-      // Remove active from all buttons
-      document.querySelectorAll('.nav-links button').forEach(btn => {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-selected', 'false');
-        btn.tabIndex = 0;
-      });
-      // Hide all tab sections
-      document.querySelectorAll('.tab-section').forEach(sec => sec.classList.remove('active'));
-      // Activate clicked button and show tab
+    function showSection(event, id) {
+      event.preventDefault();
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
       event.target.classList.add('active');
-      event.target.setAttribute('aria-selected', 'true');
-      document.getElementById(id).classList.add('active');
-      // Update URL hash for sharing/bookmarking
+      document.querySelectorAll('main .section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
       history.replaceState(null, '', '#' + id);
-      // Focus the new tab section for accessibility
-      document.getElementById(id).focus();
     }
-    // On load: show section if hash is present
+    // Show section based on URL hash on page load
     window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash.replace('#','');
-      if (hash && document.getElementById(hash)) {
-        const btn = document.querySelector(`.nav-links button[onclick*="'${hash}'"]`);
-        if (btn) btn.click();
-      }
-      // Keyboard navigation for tabs (left/right arrow keys)
-      document.querySelector('.nav-links').addEventListener('keydown', function(e) {
-        if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-          let buttons = Array.from(this.querySelectorAll('button'));
-          let index = buttons.indexOf(document.activeElement);
-          if (index !== -1) {
-            let next = e.key === "ArrowRight"
-              ? (index + 1) % buttons.length
-              : (index - 1 + buttons.length) % buttons.length;
-            buttons[next].focus();
-          }
-        }
-      });
+      const hash = window.location.hash.replace('#','') || 'home';
+      const link = document.querySelector('nav a[href="#'+hash+'"]');
+      if (link) link.click();
     });
   </script>
 </body>
