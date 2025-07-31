@@ -9,10 +9,10 @@ body {
   font-family: "Georgia", serif;
   line-height: 1.7;
   color: #2c3e50;
-  background-color: #f8f8f8;
+  background-color: #f7f7f7;
 }
 
-/* Header */
+/* Header & Navigation */
 header {
   background-color: #fff;
   padding: 15px 20px;
@@ -46,19 +46,16 @@ header {
   color: #2980b9;
 }
 
-/* Main Content */
+/* Main Layout */
 main {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
 }
 
-.about {
+.profile-section {
   display: flex;
   gap: 50px;
-  width: 100%;
 }
 
 .profile {
@@ -79,34 +76,38 @@ main {
 
 .profile h2 {
   font-size: 1.4em;
-  margin: 10px 0 5px;
+  margin: 15px 0 5px;
   color: #2c3e50;
 }
 
 .profile p {
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: #555;
   margin: 5px 0;
 }
 
-.social-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.contact-links {
   margin-top: 20px;
+  font-size: 0.95em;
 }
 
-.social-links a {
-  font-size: 1.4em;
+.contact-links a {
   color: #555;
+  display: block;
+  margin: 10px 0;
   transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+.contact-links a:hover {
   color: #2980b9;
 }
 
+.contact-links i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Content Area */
 .content {
   flex: 2;
   background-color: #fff;
@@ -120,6 +121,7 @@ main {
   margin-bottom: 15px;
   position: relative;
   padding-bottom: 8px;
+  font-size: 1.5em;
 }
 
 .content h2::after {
@@ -144,7 +146,7 @@ main {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background-color: #fff;
   color: #777;
   font-size: 0.9em;
@@ -152,16 +154,16 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .about {
+  .profile-section {
     flex-direction: column;
     align-items: center;
   }
 
   .profile {
-    margin-bottom: 30px;
     max-width: none;
+    margin-bottom: 30px;
   }
 
   .content {
