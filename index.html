@@ -1,115 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kallyan Chakma</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kallyan Chakma – Research Fellow</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: "Georgia", serif;
-      background-color: #fff;
-      color: #2c3e50;
-      line-height: 1.7;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+    :root {
+      --primary: #1abc9c;
+      --bg: #f9f9f9;
+      --fg: #222;
     }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Montserrat', sans-serif; background:var(--bg); color:var(--fg); line-height:1.6; }
+    header { padding:2rem 1rem; text-align:center; border-bottom:1px solid #ddd; }
+    header h1 { font-size:2.5rem; margin-bottom:.5rem; }
+    header p { font-size:1.1rem; color:#555; }
 
-    h1 {
-      font-size: 2.2em;
-      margin-bottom: 0;
-    }
+    nav { display:flex; justify-content:center; gap:1.5rem; flex-wrap: wrap; padding:1rem 0; }
+    nav a { color:var(--primary); text-decoration:none; font-weight:500; }
+    nav a.active { border-bottom:2px solid var(--primary); }
 
-    h2 {
-      font-size: 1.4em;
-      margin-top: 40px;
-    }
+    section { padding:4rem 1rem; max-width:800px; margin:0 auto; }
+    h2 { font-size:1.8rem; margin-bottom:1rem; color:var(--primary); }
+    ul { padding-left:1.2rem; }
 
-    p, li {
-      font-size: 1em;
-    }
-
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-
-    .contact-links {
-      margin-top: 10px;
-    }
-
-    .contact-links a {
-      margin-right: 15px;
-    }
-
-    .headshot {
-      float: right;
-      margin: 0 0 20px 20px;
-      border-radius: 8px;
-      width: 150px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.85em;
-      color: #777;
-    }
-
-    .clear {
-      clear: both;
+    @media(max-width:600px){
+      header h1 { font-size:2rem; }
+      section { padding:2rem 1rem; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Kallyan Chakma</h1>
+    <p>Research Fellow, Bangladesh Forest Research Institute</p>
+    <nav>
+      <a href="#about" class="active">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+      <a href="#personal">Personal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <h1>Kallyan Chakma</h1>
-  <p><strong>Research Fellow, Bangladesh Forest Research Institute</strong><br>
-  Molecular Biologist | Microbial Genomics | Bioinformatics</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am <strong>Kallyan Chakma</strong>, a Research Fellow at the Bangladesh Forest Research Institute. My focus is on microbial genomics, metagenomics, and bioinformatics. I hold a degree in Genetic Engineering and Biotechnology from the <a href="https://cu.ac.bd" target="_blank" rel="noopener">University of Chittagong</a>. My research bridges traditional practices and modern molecular biology, especially in agarwood resin production.</p>
+  </section>
 
-  <div class="contact-links">
-    <a href="mailto:kallyan.chakma@outlook.com">Email</a>
-    <a href="https://www.linkedin.com/in/kallyan-chakma-097148103/" target="_blank">LinkedIn</a>
-    <a href="https://orcid.org/0000-0002-9870-4561" target="_blank">ORCID</a>
-  </div>
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Microbial and comparative genomics</li>
+      <li>Metagenomic analysis &amp; AMR profiling</li>
+      <li>Agarwood biosynthesis and fungal induction</li>
+      <li>Bioinformatics workflows in public health</li>
+    </ul>
+  </section>
 
-  <img src="kallyan.jpeg" alt="Kallyan Chakma" class="headshot">
+  <section id="projects">
+    <h2>Ongoing Projects</h2>
+    <ul>
+      <li>Biotic/abiotic inducers for agarwood resin synthesis</li>
+      <li>Pan‑genomic comparison and AMR analysis of <em>Pseudomonas aeruginosa</em></li>
+      <li>Metagenomic profiling of environmental &amp; clinical microbiomes</li>
+    </ul>
+  </section>
 
-  <h2>About Me</h2>
-  <p>Hello! Welcome to my homepage.</p>
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <p><a href="CV_Kallyan_Chakma.pdf" target="_blank" rel="noopener">Download my CV</a> (updated July 2025).</p>
+  </section>
 
-  <p>I am <strong>Kallyan Chakma</strong>, currently working as a Research Fellow at the Bangladesh Forest Research Institute. I specialize in microbial genomics, metagenomics, and the molecular biology of plant-microbe interactions.</p>
+  <section id="personal">
+    <h2>Personal</h2>
+    <p>Outside research, I enjoy hiking, reading philosophy, learning about traditional plant‑based remedies, and science communication.</p>
+  </section>
 
-  <p>I completed my undergraduate studies in Genetic Engineering and Biotechnology from the <a href="https://cu.ac.bd" target="_blank">University of Chittagong</a>. I have worked extensively on pathogen genomics, antimicrobial resistance profiling, and viral genome surveillance, including dengue virus, WSSV, SARS-CoV-2, and drug-resistant *Klebsiella pneumoniae*.</p>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let’s connect via email or LinkedIn for collaborations, research discussions, or anything science‑related.</p>
+  </section>
 
-  <p>At present, my research focuses on optimizing fungal inoculation techniques for enhanced agarwood resin production — an interface between traditional practices and modern molecular approaches.</p>
-
-  <div class="clear"></div>
-
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Microbial and comparative genomics</li>
-    <li>Metagenomic analysis and antimicrobial resistance (AMR) profiling</li>
-    <li>Agarwood biosynthesis and fungal induction strategies</li>
-    <li>Public health genomics and bioinformatics workflows</li>
-  </ul>
-
-  <h2>CV</h2>
-  <p>My updated CV can be downloaded <a href="CV_Kallyan_Chakma.pdf" target="_blank">here</a> (last updated July 2025).</p>
-
-  <h2>Ongoing Projects</h2>
-  <ul>
-    <li>Development of biotic/abiotic inducers for agarwood resin synthesis</li>
-    <li>Pan-genomic comparison and AMR analysis of *Pseudomonas aeruginosa*</li>
-    <li>Metagenomic profiling of environmental and clinical microbiomes</li>
-  </ul>
-
-  <h2>Personal</h2>
-  <p>Beyond the lab, I enjoy hiking, reading philosophical literature, and learning about traditional plant-based remedies. I'm also passionate about science communication and knowledge translation for rural development.</p>
-
-  <footer>
-    &copy; 2025 Kallyan Chakma · Site built with GitHub Pages · Last updated July 31, 2025
+  <footer style="text-align:center; padding:2rem 1rem; color:#777;">
+    &copy; 2025 Kallyan Chakma. Built with GitHub Pages. Last updated July 31, 2025.
   </footer>
 
+  <script>
+    const navItems = document.querySelectorAll('nav a');
+    navItems.forEach(a => {
+      a.addEventListener('click', e => {
+        navItems.forEach(x => x.classList.remove('active'));
+        a.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
